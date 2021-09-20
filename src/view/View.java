@@ -7,8 +7,9 @@ package view;
 
 /**
  *
- * @author 2dam
+ * @author Ander
  */
 public interface View {
     
+    public void showGreeting(String text);
 }

@@ -7,8 +7,9 @@ package model;
 
 /**
  *
- * @author 2dam
+ * @author Yeray
  */
 public interface Model {
     
+    public String getGreeting() throws Exception;
 }

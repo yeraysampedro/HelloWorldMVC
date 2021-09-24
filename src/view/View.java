@@ -11,5 +11,9 @@ package view;
  */
 public interface View {
     
+    /**
+     * Method that shows the greeting
+     * @param text the text to be shown
+     */
     public void showGreeting(String text);
 }

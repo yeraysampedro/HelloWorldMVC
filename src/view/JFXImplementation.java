@@ -6,51 +6,39 @@
 package view;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+
+import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
+
 import javafx.stage.Stage;
 
 /**
  *
  * @author 2dam
  */
-public class JFXImplementation extends Application implements View{
-    
+public class JFXImplementation extends Application implements View {
+
+    private Label label;
+
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
+        label = new Label(getParameters().getUnnamed().get(0));    
+        Pane root = new Pane();
+        root.getChildren().add(label);
+        root.setPrefSize(200, 200);
+        Scene scene = new Scene(root);
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public void showGreeting(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String[] parameters = new String[1];
+        parameters[0] = text;
+        launch(parameters);
     }
-    
+
 }

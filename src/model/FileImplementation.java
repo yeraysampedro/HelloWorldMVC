@@ -13,11 +13,13 @@ import java.util.ResourceBundle;
  */
 public class FileImplementation implements Model{
 
-    private final ResourceBundle file = ResourceBundle.getBundle("resources.greeting");;
+    private ResourceBundle file;
     
     @Override
     public String getGreeting() throws Exception{
-        return file.getString("greeting");
+        file = ResourceBundle.getBundle("resources.greeting");
+        String greeting = file.getString("TEXT");
+        return greeting;
     }
     
 }

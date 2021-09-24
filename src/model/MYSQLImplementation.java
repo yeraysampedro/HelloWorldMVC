@@ -18,17 +18,18 @@ public class MYSQLImplementation extends BDConnection implements Model {
         String greeting = null;
         try {
             connect();
-            stmt = con.prepareStatement("SELECT * FROM GREETING");
-            stmt.executeQuery();
-            ResultSet rs = null;
-            rs = stmt.executeQuery();
+            stmt = con.prepareStatement("SELECT greeting FROM GREETING");        
+            ResultSet rs = stmt.executeQuery();
             if (rs != null) {
                 while (rs.next()) {
                     greeting = rs.getString("greeting");
+                  
                 }
             }
+            closeRs(rs);
             disconnect();
         } catch (Exception e) {
+            throw new Exception("Error con el manejo de datos de la BBDD");
         }
 
         return greeting;

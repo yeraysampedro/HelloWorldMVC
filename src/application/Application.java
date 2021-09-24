@@ -5,9 +5,13 @@
  */
 package application;
 
+import controller.Controller;
+import model.ModelFactory;
+import view.ViewFactory;
+
 /**
  *
- * @author 2dam
+ * @author Yeray
  */
 public class Application {
 
@@ -15,7 +19,7 @@ public class Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new Controller(ModelFactory.getModel(), ViewFactory.getView()).run();
     }
-    
+
 }

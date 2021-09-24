@@ -11,5 +11,10 @@ package model;
  */
 public interface Model {
     
+    /**
+     * Method that gets the greeting 
+     * @return
+     * @throws Exception
+     */
     public String getGreeting() throws Exception;
 }

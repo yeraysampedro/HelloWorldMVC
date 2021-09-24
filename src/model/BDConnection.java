@@ -13,13 +13,24 @@ import java.util.ResourceBundle;
  */
 public abstract class BDConnection {
 
+    /**
+     * Attribute for the connection
+     */
     protected Connection con;
+
+    /**
+     * Attribute for the prepared statement
+     */
     protected PreparedStatement stmt;
     private ResourceBundle configFile;
     private String url;
     private String user;
     private String pass;
 
+    /**
+     * Method that connects into the MYSQL database reading the url, user and password from an archive
+     * @throws Exception
+     */
     protected void connect() throws Exception {
         try {
             configFile = ResourceBundle.getBundle("resources.bdconfig");
@@ -32,6 +43,10 @@ public abstract class BDConnection {
         }
     }
 
+    /**
+     *Method that disconnects from the MYSQL database
+     * @throws Exception
+     */
     protected void disconnect() throws Exception {
         try {
             if (stmt != null) {
@@ -45,6 +60,12 @@ public abstract class BDConnection {
         }
     }
 
+    /**
+     * Method that closes the resulsets
+     * @param rs
+     * @throws SQLException
+     * @throws Exception
+     */
     protected void closeRs(ResultSet rs) throws SQLException, Exception {
         if (rs != null) {
             try {

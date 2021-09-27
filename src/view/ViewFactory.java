@@ -14,29 +14,35 @@ import java.util.ResourceBundle;
 public class ViewFactory {
 
     /**
-     *String that establishes the name for the JavaFX type view
+     * String that establishes the name for the JavaFX type view
      */
     public static final String JFX = "JFX";
 
     /**
-     *String that establishes the name for the Swing type view
+     * String that establishes the name for the Swing type view
      */
     public static final String SWING = "SWING";
 
     /**
-     *String that establishes the name for the Console type view
+     * String that establishes the name for the Console type view
      */
     public static final String CONSOLE = "CONSOLE";
 
+    public static String dataType;
+
     /**
-     * Method that returns the view depending on the
-     * typeSelector.properties archive
-     * @return
+     * Method that returns the view depending on the typeSelector.properties
+     * archive
+     *
+     * @return view, the view selected by the user
      */
     public static View getView() {
         View view;
-        ResourceBundle configFile = ResourceBundle.getBundle("resources.typeSelector");
-        String dataType = configFile.getString("VIEW");
+        // comprobar datatype = null o no
+        if (dataType == null) {
+            dataType = ResourceBundle.getBundle("resources.typeSelector").getString("VIEW");
+        }
+
         switch (dataType) {
             case (JFX):
                 view = new JFXImplementation();
@@ -52,4 +58,9 @@ public class ViewFactory {
         }
         return view;
     }
+
+    public void setView(String dataType) {
+        this.dataType = dataType;
+    }
+
 }

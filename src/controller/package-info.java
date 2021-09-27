@@ -1,4 +1,4 @@
-/*
- * Este paquete contiene los controladores de la  aplicación
+/**
+ * This package contains the controlels of the application
  */
 package controller;

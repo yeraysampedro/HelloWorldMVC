@@ -27,7 +27,7 @@ public class ModelFactory {
      * Method that returns the data model depending on the
      * typeSelector.properties archive
      *
-     * @return
+     * @return model, the model chosen by the user
      */
     public static Model getModel() {
         Model modelo;
@@ -44,8 +44,6 @@ public class ModelFactory {
                 modelo = null;
                 break;
         }
-
         return modelo;
-
     }
 }

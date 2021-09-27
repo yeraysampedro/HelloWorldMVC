@@ -14,7 +14,7 @@ public class ConsoleImplementation implements View{
     
     /**
      * Show the text that comes as a parameter in the console.
-     * @param text 
+     * @param text the greeting to be shown
      */
     @Override
     public void showGreeting(String text) {

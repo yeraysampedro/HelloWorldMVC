@@ -29,7 +29,7 @@ public abstract class BDConnection {
 
     /**
      * Method that connects into the MYSQL database reading the url, user and password from an archive
-     * @throws Exception
+     * @throws Exception Generic exception
      */
     protected void connect() throws Exception {
         try {
@@ -45,7 +45,7 @@ public abstract class BDConnection {
 
     /**
      *Method that disconnects from the MYSQL database
-     * @throws Exception
+     * @throws Exception Generic exception
      */
     protected void disconnect() throws Exception {
         try {
@@ -62,9 +62,9 @@ public abstract class BDConnection {
 
     /**
      * Method that closes the resulsets
-     * @param rs
-     * @throws SQLException
-     * @throws Exception
+     * @param rs result set to be closed
+     * @throws SQLException SQL exception
+     * @throws Exception Generic exception
      */
     protected void closeRs(ResultSet rs) throws SQLException, Exception {
         if (rs != null) {

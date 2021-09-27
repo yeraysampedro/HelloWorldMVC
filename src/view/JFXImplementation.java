@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author 2dam
+ * @author Yeray - Ander
  */
 public class JFXImplementation extends Application implements View {
 
@@ -36,6 +36,7 @@ public class JFXImplementation extends Application implements View {
 
     @Override
     public void showGreeting(String text) {
+  
         String[] parameters = new String[1];
         parameters[0] = text;
         launch(parameters);

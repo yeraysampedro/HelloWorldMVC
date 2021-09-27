@@ -5,29 +5,20 @@
  */
 package model;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author 2dam
  */
 public class ModelFactoryTest {
-
+    
     public ModelFactoryTest() {
     }
 
     @Test
-    public void testModelFactoryMYSQL() {
-        Model test = ModelFactory.getModel();      
-        assertEquals("Implementación en MYSQL correcta", test instanceof MYSQLImplementation, true);
-
+    public void testSomeMethod() {
     }
-
-    @Test
-    public void testModelFactoryFile() {
-        Model test = ModelFactory.getModel();
-        assertEquals("Implementación en FICHERO correcta", test instanceof FileImplementation, true);
-    }
-
+    
 }

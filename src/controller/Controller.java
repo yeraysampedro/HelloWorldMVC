@@ -11,7 +11,7 @@ import view.View;
 
 /**
  *
- * @author Yeray&Ander
+ * @author Yeray, Ander
  */
 public class Controller {
 
@@ -19,7 +19,7 @@ public class Controller {
     View view;
 
     /**
-     *
+     * Method that launches the application
      */
     public void run() {
         try {
@@ -32,8 +32,8 @@ public class Controller {
 
     /**
      *  Sets the model and the view type based on the ones received by the Application class
-     * @param receivedModel
-     * @param receivedView
+     * @param receivedModel the model chosen by the user
+     * @param receivedView the view chosen by the user
      */
     public Controller(Model receivedModel, View receivedView) {
         view = receivedView;

@@ -13,8 +13,8 @@ public interface Model {
     
     /**
      * Method that gets the greeting 
-     * @return
-     * @throws Exception
+     * @return String, the greeting
+     * @throws Exception Generic exception
      */
     public String getGreeting() throws Exception;
 }

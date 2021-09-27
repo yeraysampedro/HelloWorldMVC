@@ -1,4 +1,4 @@
 /**
- * Este paquete contiene los archivos necesarios para lanzar la aplicación
+ * This package contains the needed files to run the application
  */
 package application;

@@ -1,4 +1,4 @@
-/*
- * Este paquete contiene los archivos de modelo necesarios para fucnionar a la aplicación
+/**
+ * This package contains all the archives related to the model
  */
 package model;

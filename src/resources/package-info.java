@@ -1,4 +1,4 @@
-/*
- * Este paquete contiene archivos de configuración para la aplicación además de las factorías a utilizar
+/**
+ * This package contains the resources
  */
 package resources;

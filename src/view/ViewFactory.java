@@ -8,10 +8,17 @@ package view;
 import java.util.ResourceBundle;
 
 /**
+ * Class that instanciates a view
  *
- * @author Yeray
+ * @author Yeray Sampedro, Ander Arruza
  */
 public class ViewFactory {
+
+    /**
+     *  Protected method to prevent the creation of ViewFactory type objects
+     */
+    protected ViewFactory() {
+    }
 
     /**
      * String that establishes the name for the JavaFX type view
@@ -28,7 +35,10 @@ public class ViewFactory {
      */
     public static final String CONSOLE = "CONSOLE";
 
-    public static String dataType;
+    /**
+     * The type of data to choose, mainly used for testing the factory
+     */
+    public static String viewType;
 
     /**
      * Method that returns the view depending on the typeSelector.properties
@@ -38,12 +48,11 @@ public class ViewFactory {
      */
     public static View getView() {
         View view;
-        // comprobar datatype = null o no
-        if (dataType == null) {
-            dataType = ResourceBundle.getBundle("resources.typeSelector").getString("VIEW");
+        if (viewType == null) {
+            viewType = ResourceBundle.getBundle("resources.typeSelector").getString("VIEW");
         }
 
-        switch (dataType) {
+        switch (viewType) {
             case (JFX):
                 view = new JFXImplementation();
                 break;
@@ -59,8 +68,13 @@ public class ViewFactory {
         return view;
     }
 
-    public void setView(String dataType) {
-        this.dataType = dataType;
+    /**
+     * The method to set the view
+     *
+     * @param viewType
+     */
+    public void setView(String viewType) {
+        this.viewType = viewType;
     }
 
 }

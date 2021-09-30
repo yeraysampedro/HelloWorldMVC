@@ -10,8 +10,9 @@ import model.ModelFactory;
 import view.ViewFactory;
 
 /**
+ * Application main class
  *
- * @author Yeray
+ * @author Yeray Sampedro, Ander Arruza
  */
 public class Application {
 

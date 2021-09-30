@@ -17,7 +17,7 @@ import org.junit.Test;
 public class ViewFactoryTest {
 
     private View view;
-    private String viewType="SWING";
+    private String viewType = "SWING";
 
     @Before
     public void testInstance() {

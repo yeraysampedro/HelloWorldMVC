@@ -8,18 +8,19 @@ package model;
 import java.util.ResourceBundle;
 
 /**
+ * Class that implements the Model interface
  *
- * @author Yeray
+ * @author Yeray Sampedro, Ander Arruza
  */
-public class FileImplementation implements Model{
+public class FileImplementation implements Model {
 
     private ResourceBundle file;
-    
+
     @Override
-    public String getGreeting() throws Exception{
+    public String getGreeting() throws Exception {
         file = ResourceBundle.getBundle("resources.greeting");
         String greeting = file.getString("TEXT");
         return greeting;
     }
-    
+
 }

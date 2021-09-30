@@ -8,8 +8,9 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
+ * Class that allows the connection to a database
  *
- * @author Yeray
+ * @author Yeray Sampedro, Ander Arruza
  */
 public abstract class BDConnection {
 
@@ -28,7 +29,9 @@ public abstract class BDConnection {
     private String pass;
 
     /**
-     * Method that connects into the MYSQL database reading the url, user and password from an archive
+     * Method that connects into the MYSQL database reading the url, user and
+     * password from an archive
+     *
      * @throws Exception Generic exception
      */
     protected void connect() throws Exception {
@@ -44,7 +47,8 @@ public abstract class BDConnection {
     }
 
     /**
-     *Method that disconnects from the MYSQL database
+     * Method that disconnects from the MYSQL database
+     *
      * @throws Exception Generic exception
      */
     protected void disconnect() throws Exception {
@@ -62,6 +66,7 @@ public abstract class BDConnection {
 
     /**
      * Method that closes the resulsets
+     *
      * @param rs result set to be closed
      * @throws SQLException SQL exception
      * @throws Exception Generic exception

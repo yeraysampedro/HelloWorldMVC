@@ -8,10 +8,10 @@ package controller;
 import model.Model;
 import view.View;
 
-
 /**
+ * Class that runs the application
  *
- * @author Yeray, Ander
+ * @author Yeray Sampedro, Ander Arruza
  */
 public class Controller {
 
@@ -31,12 +31,14 @@ public class Controller {
     }
 
     /**
-     *  Sets the model and the view type based on the ones received by the Application class
+     * Sets the model and the view type based on the ones received by the
+     * Application class
+     *
      * @param receivedModel the model chosen by the user
      * @param receivedView the view chosen by the user
      */
     public Controller(Model receivedModel, View receivedView) {
         view = receivedView;
-        model =receivedModel;
+        model = receivedModel;
     }
 }

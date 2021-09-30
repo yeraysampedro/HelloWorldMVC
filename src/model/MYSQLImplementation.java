@@ -8,8 +8,9 @@ package model;
 import java.sql.ResultSet;
 
 /**
+ * Class that implements the Model interface
  *
- * @author Yeray
+ * @author Yeray Sampedro, Ander Arruza
  */
 public class MYSQLImplementation extends BDConnection implements Model {
 
@@ -18,12 +19,12 @@ public class MYSQLImplementation extends BDConnection implements Model {
         String greeting = null;
         try {
             connect();
-            stmt = con.prepareStatement("SELECT greeting FROM GREETING");        
+            stmt = con.prepareStatement("SELECT greeting FROM GREETING");
             ResultSet rs = stmt.executeQuery();
             if (rs != null) {
                 while (rs.next()) {
                     greeting = rs.getString("greeting");
-                  
+
                 }
             }
             closeRs(rs);

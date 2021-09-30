@@ -6,13 +6,15 @@
 package model;
 
 /**
+ * Interface for model type classes
  *
- * @author Yeray
+ * @author Yeray Sampedro, Ander Arruza
  */
 public interface Model {
-    
+
     /**
-     * Method that gets the greeting 
+     * Method that gets the greeting
+     *
      * @return String, the greeting
      * @throws Exception Generic exception
      */

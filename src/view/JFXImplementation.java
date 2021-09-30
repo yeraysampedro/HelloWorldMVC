@@ -15,8 +15,9 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
+ * Class that implements the view interface
  *
- * @author Yeray - Ander
+ * @author Yeray Sampedro, Ander Arruza
  */
 public class JFXImplementation extends Application implements View {
 
@@ -24,7 +25,7 @@ public class JFXImplementation extends Application implements View {
 
     @Override
     public void start(Stage primaryStage) {
-        label = new Label(getParameters().getUnnamed().get(0));    
+        label = new Label(getParameters().getUnnamed().get(0));
         Pane root = new Pane();
         root.getChildren().add(label);
         root.setPrefSize(200, 200);
@@ -36,7 +37,6 @@ public class JFXImplementation extends Application implements View {
 
     @Override
     public void showGreeting(String text) {
-  
         String[] parameters = new String[1];
         parameters[0] = text;
         launch(parameters);

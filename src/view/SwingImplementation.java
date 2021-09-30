@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package view;
+
 /**
+ * Class that implements the view interface
  *
- * @author Ander Arruza
+ * @author Yeray Sampedro, Ander Arruza
  */
 public class SwingImplementation extends javax.swing.JFrame implements View {
 
@@ -16,6 +18,7 @@ public class SwingImplementation extends javax.swing.JFrame implements View {
     public SwingImplementation() {
         initComponents();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,7 +54,6 @@ public class SwingImplementation extends javax.swing.JFrame implements View {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel greeting;
     // End of variables declaration//GEN-END:variables
@@ -60,6 +62,6 @@ public class SwingImplementation extends javax.swing.JFrame implements View {
     public void showGreeting(String text) {
         greeting.setText(text);
         this.setVisible(true);
-        
+
     }
 }
